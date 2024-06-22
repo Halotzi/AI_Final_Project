@@ -11,7 +11,7 @@ public class AlertOthers
         {
             if (hitCollider.gameObject != enemy && hitCollider.gameObject.CompareTag("Enemy"))
             {
-                EnemyBehaviorManager otherEnemy = hitCollider.GetComponent<EnemyBehaviorManager>();
+                EnemyBehaviorHandler otherEnemy = hitCollider.GetComponent<EnemyBehaviorHandler>();
                 if (otherEnemy != null)
                 {
                     otherEnemy.SetBehavior(new ChaseBehavior(otherEnemy.gameObject, player));
