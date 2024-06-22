@@ -262,6 +262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5934053301590419728, guid: 16b3fc1d629b9124fba4d27f9069f010, type: 3}
       propertyPath: m_Name
       value: paved road turn (5)
@@ -2584,6 +2588,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4006659487755018295, guid: c57cb2817634b4b47b52b7e579d0257c, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -2938,6 +2946,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -3070,6 +3082,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3594770638156550670, guid: 1fdbf5b67f29ae0408ea21157c08f801, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -3202,6 +3218,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -3622,6 +3642,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 36
@@ -3926,6 +3950,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 30
@@ -4070,6 +4098,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4006659487755018295, guid: c57cb2817634b4b47b52b7e579d0257c, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -4268,6 +4300,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4006659487755018295, guid: c57cb2817634b4b47b52b7e579d0257c, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -6026,6 +6062,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3594770638156550670, guid: 1fdbf5b67f29ae0408ea21157c08f801, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -6960,6 +7000,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -7368,6 +7412,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -7782,6 +7830,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -7926,6 +7978,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4006659487755018295, guid: c57cb2817634b4b47b52b7e579d0257c, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -8124,6 +8180,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -8190,6 +8250,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -8404,6 +8468,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4006659487755018295, guid: c57cb2817634b4b47b52b7e579d0257c, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -8848,6 +8916,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 29
@@ -10231,6 +10303,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4006659487755018295, guid: c57cb2817634b4b47b52b7e579d0257c, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -10630,6 +10706,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4006659487755018295, guid: c57cb2817634b4b47b52b7e579d0257c, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -10696,6 +10776,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5934053301590419728, guid: 16b3fc1d629b9124fba4d27f9069f010, type: 3}
       propertyPath: m_Name
       value: paved road turn (3)
@@ -11182,6 +11266,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5934053301590419728, guid: 16b3fc1d629b9124fba4d27f9069f010, type: 3}
       propertyPath: m_Name
       value: paved road turn (1)
@@ -11680,6 +11768,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5934053301590419728, guid: 16b3fc1d629b9124fba4d27f9069f010, type: 3}
       propertyPath: m_Name
       value: paved road turn (2)
@@ -11902,6 +11994,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 95
@@ -12034,6 +12130,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -13084,6 +13184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3594770638156550670, guid: 1fdbf5b67f29ae0408ea21157c08f801, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -13652,6 +13756,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 94
@@ -15285,6 +15393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1650447457}
+  - component: {fileID: 1650447458}
   m_Layer: 0
   m_Name: Scene
   m_TagString: Untagged
@@ -15611,6 +15720,37 @@ Transform:
   - {fileID: 569611463}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1650447458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650447456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 160ead525114b10489edf9c4b0bf1fff, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1655345119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15751,6 +15891,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3594770638156550670, guid: 1fdbf5b67f29ae0408ea21157c08f801, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -16579,6 +16723,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -16871,6 +17019,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5934053301590419728, guid: 16b3fc1d629b9124fba4d27f9069f010, type: 3}
       propertyPath: m_Name
       value: paved road turn
@@ -19031,6 +19183,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3594770638156550670, guid: 1fdbf5b67f29ae0408ea21157c08f801, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -20579,6 +20735,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5934053301590419728, guid: 16b3fc1d629b9124fba4d27f9069f010, type: 3}
       propertyPath: m_Name
       value: paved road turn (4)
@@ -20723,6 +20883,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -21500,6 +21664,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1650447457}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8375587967749694843, guid: 5299f87befe8b184e94d24bd69ccfbbd, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -21767,10 +21935,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3578964711709821316, guid: bf09914fa331a1344a3985029d7a3821, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6588705559404220340}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf09914fa331a1344a3985029d7a3821, type: 3}
 --- !u!4 &2231621967148178088 stripped
 Transform:
@@ -22346,33 +22511,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3648723205554840095, guid: 3bd8f2781b4979d49aa1f916331694ae, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 8898014222018111362}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd8f2781b4979d49aa1f916331694ae, type: 3}
---- !u!1 &6588705559404220339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3578964711709821316, guid: bf09914fa331a1344a3985029d7a3821, type: 3}
-  m_PrefabInstance: {fileID: 1211973456966444112}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6588705559404220340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6588705559404220339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a1061e50f8c9d44cac798c759e76cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  patrolPoints: []
-  attackRange: 2
-  searchDuration: 5
-  sightRange: 10
 --- !u!1001 &7028400282823854338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22443,11 +22583,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6468026511714207594, guid: c07305f1a8da4d04da083cbf3dff97b6, type: 3}
   m_PrefabInstance: {fileID: 3766365052039557557}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &8086151996772662587 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3648723205554840095, guid: 3bd8f2781b4979d49aa1f916331694ae, type: 3}
-  m_PrefabInstance: {fileID: 6546521776333229020}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8091698995621633459
 PrefabInstance:
@@ -22602,23 +22737,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2002014880370375069, guid: e601906261138b5449ed5390bf7ab49f, type: 3}
   m_PrefabInstance: {fileID: 7028400282823854338}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &8898014222018111362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8086151996772662587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a1061e50f8c9d44cac798c759e76cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agent: {fileID: 0}
-  patrolPoints: []
-  attackRange: 2
-  searchDuration: 5
-  sightRange: 10
 --- !u!1001 &9148341996926385315
 PrefabInstance:
   m_ObjectHideFlags: 0
