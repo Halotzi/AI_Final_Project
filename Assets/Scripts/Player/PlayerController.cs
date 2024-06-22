@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     [SerializeField] private Rigidbody rb;
+    [SerializeField] private Animator _animator;
     
     private Vector3 movementInput;
 
@@ -44,6 +45,12 @@ public class PlayerController : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.LookRotation(movementInput, Vector3.up);
             rb.rotation = Quaternion.Slerp(rb.rotation, targetRotation, Time.fixedDeltaTime * 10f);
+            _animator.SetBool("IsMoving",true);
+        }
+
+        else
+        {
+            _animator.SetBool("IsMoving",false);
         }
     }
 }
