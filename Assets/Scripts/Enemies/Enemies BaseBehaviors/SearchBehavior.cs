@@ -9,17 +9,19 @@ public class SearchBehavior : BaseBehavior
         : base(enemy, player, settings,agent, animator)
     {
         _startingSearchStartTime = Time.time;
+        _agent.isStopped = true;
+        _animator.SetTrigger("Search");
     }
 
     public override void Execute()
     {
         if (Time.time - _startingSearchStartTime > _settings.searchDuration)
         {
-            // Return to patrol or other state
+            _enemy.GetComponent<EnemyBehaviorHandler>().ReturnEnemyToPatrol();
         }
         else
         {
-            // Implement search logic
+            // Maybe search logic?
         }
     }
 }

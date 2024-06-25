@@ -18,6 +18,7 @@ public class AttackBehavior : BaseBehavior
     {
         if (Vector3.Distance(_enemy.transform.position, _player.position) <= _attackRange && Time.time > lastAttackTime + attackCooldown)
         {
+            _animator.SetTrigger("Attack");
             lastAttackTime = Time.time;
         }
     }

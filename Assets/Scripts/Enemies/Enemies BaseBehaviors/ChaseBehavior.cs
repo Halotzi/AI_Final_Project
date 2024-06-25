@@ -6,6 +6,7 @@ public class ChaseBehavior : BaseBehavior
     public ChaseBehavior(BaseEnemy enemy, Transform player, EnemySettings settings,NavMeshAgent agent, Animator animator) 
         : base(enemy, player, settings,agent, animator)
     {
+        _agent.isStopped = false;
         agent.speed = settings.chaseSpeed; 
     }
 

@@ -1,75 +1,81 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Serialization;
 
 public class EnemyBehaviorHandler : MonoBehaviour
 {
-    [SerializeField] private NavMeshAgent agent;
-    [SerializeField] private EnemySettings settings;  // Reference to the EnemySettings ScriptableObject
-    [SerializeField] private Transform[] patrolPoints;
+    [SerializeField] private NavMeshAgent _agent;
+    [SerializeField] private EnemySettings _settings;  
+    [SerializeField] private Transform[] _patrolPoints;
 
     private Animator _animator;
-    private BaseEnemy _enemy;
-    private Transform player;
-    private BaseBehavior currentBehavior;
-    private AlertOthers alertOthers;
+    private BaseEnemy _baseEnemy;
+    private Transform _playerTransform;
+    private BaseBehavior _currentBehavior;
+    private AlertOthers _alertOthers;
 
     private int _lastPatrolIndex = 0;
 
     void Update()
     {
-        if (currentBehavior==null)
+        if (_currentBehavior==null)
             return;
         
-        currentBehavior.Execute();
+        _currentBehavior.Execute();
 
         if (ShouldChasePlayer())
         {
-            if(currentBehavior is ChaseBehavior)
+            if(_currentBehavior is ChaseBehavior)
                 return;
 
-            if (currentBehavior is PatrolBehavior)
+            if (_currentBehavior is PatrolBehavior)
             {
-                var patrolBehavior = (PatrolBehavior)currentBehavior;
+                var patrolBehavior = (PatrolBehavior)_currentBehavior;
                 _lastPatrolIndex = patrolBehavior.LastPatrolIndex;
             }
-            SetBehavior(new ChaseBehavior(_enemy, player, settings,agent,_animator));
-            alertOthers.AlertNearbyEnemies(_enemy, player, settings);
+            SetBehavior(new ChaseBehavior(_baseEnemy, _playerTransform, _settings,_agent,_animator));
+            _alertOthers.AlertNearbyEnemies(_baseEnemy, _playerTransform, _settings);
         }
         else if (ShouldAttackPlayer())
         {
-            if(currentBehavior is AttackBehavior)
+            if(_currentBehavior is AttackBehavior)
                 return;
             
-            SetBehavior(new AttackBehavior(_enemy, player, settings.attackRange, settings,agent,_animator));
+            SetBehavior(new AttackBehavior(_baseEnemy, _playerTransform, _settings.attackRange, _settings,_agent,_animator));
         }
         else if (ShouldSearchPlayer())
         {
-            if(currentBehavior is SearchBehavior)
+            if(_currentBehavior is SearchBehavior)
                 return;
             
-            SetBehavior(new SearchBehavior(_enemy, player, settings,agent, _animator));
+            SetBehavior(new SearchBehavior(_baseEnemy, _playerTransform, _settings,_agent, _animator));
         }
     }
 
 
     public void InitData(BaseEnemy enemy,Animator animator)
     {
-        _enemy = enemy;
+        _baseEnemy = enemy;
         _animator = animator;
-        player = GameManager.Instance.PlayerManager.transform;
-        alertOthers = new AlertOthers(settings.alertRange);
-        agent.speed = settings.patrolSpeed;  // Set initial speed to patrol speed
-        SetBehavior(new PatrolBehavior(_enemy, player, patrolPoints, settings,agent,animator,_lastPatrolIndex));
+        _playerTransform = GameManager.Instance.PlayerManager.transform;
+        _alertOthers = new AlertOthers(_settings.alertRange);
+        _agent.speed = _settings.patrolSpeed; 
+        SetBehavior(new PatrolBehavior(_baseEnemy, _playerTransform, _patrolPoints, _settings,_agent,_animator,_lastPatrolIndex));
     }
     
     public void SetBehavior(BaseBehavior newBehavior)
     {
-        currentBehavior = newBehavior;
+        _currentBehavior = newBehavior;
+    }
+
+    public void ReturnEnemyToPatrol()
+    {
+        SetBehavior(new PatrolBehavior(_baseEnemy, _playerTransform, _patrolPoints, _settings,_agent,_animator,_lastPatrolIndex));
     }
 
     private bool CanSeePlayer()
     {
-        if (Vector3.Distance(_enemy.EnemyPosition, player.position) <= settings.sightRange)
+        if (Vector3.Distance(_baseEnemy.EnemyPosition, _playerTransform.position) <= _settings.sightRange)
         {
             return true;
         }
@@ -78,7 +84,7 @@ public class EnemyBehaviorHandler : MonoBehaviour
 
     private bool ShouldChasePlayer()
     {
-        if (CanSeePlayer() && Vector3.Distance(_enemy.EnemyPosition, player.position) > settings.attackRange)
+        if (CanSeePlayer() && Vector3.Distance(_baseEnemy.EnemyPosition, _playerTransform.position) > _settings.attackRange)
             return true;
 
         return false;
@@ -86,7 +92,7 @@ public class EnemyBehaviorHandler : MonoBehaviour
     
     private bool ShouldAttackPlayer()
     {
-        if (Vector3.Distance(_enemy.EnemyPosition, player.position) <= settings.attackRange)
+        if (Vector3.Distance(_baseEnemy.EnemyPosition, _playerTransform.position) <= _settings.attackRange)
             return true;
 
         return false;
@@ -94,7 +100,7 @@ public class EnemyBehaviorHandler : MonoBehaviour
     
     private bool ShouldSearchPlayer()
     {
-        if (!CanSeePlayer() && currentBehavior.GetType() == typeof(ChaseBehavior))
+        if (!CanSeePlayer() && _currentBehavior.GetType() == typeof(ChaseBehavior))
             return true;
 
         return false;

@@ -9,6 +9,7 @@ public abstract class BaseEnemy : MonoBehaviour
     
     protected Transform player;
 
+    public EnemyBehaviorHandler EnemyBehaviorHandler => _behaviorHandler;
     public Vector3 EnemyPosition => _enemyBody.position;
     
     protected virtual void Start()

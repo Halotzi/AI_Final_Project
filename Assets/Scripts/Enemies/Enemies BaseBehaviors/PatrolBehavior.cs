@@ -10,6 +10,7 @@ public class PatrolBehavior : BaseBehavior
         : base(enemy, player, settings,agent, animator)
     {
         _agent = agent;
+        _agent.isStopped = false;
         _patrolPoints = patrolPoints;
         LastPatrolIndex = patrolIndex;
         _animator.SetTrigger("Chase");
