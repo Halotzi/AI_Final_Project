@@ -61,7 +61,12 @@ public class EnemyBehaviorHandler : MonoBehaviour
         _playerTransform = GameManager.Instance.PlayerManager.transform;
         _alertOthers = new AlertOthers(_settings.alertRange);
         _agent.speed = _settings.patrolSpeed; 
+        
+        if(_patrolPoints.Length>0)
         SetBehavior(new PatrolBehavior(_baseEnemy, _playerTransform, _patrolPoints, _settings,_agent,_animator,_lastPatrolIndex));
+
+        else
+            SetBehavior(new IdleBehavior(_baseEnemy, _playerTransform, _settings,_agent,_animator));
     }
     
     public void SetBehavior(BaseBehavior newBehavior)

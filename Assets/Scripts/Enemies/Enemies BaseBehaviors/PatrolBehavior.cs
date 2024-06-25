@@ -13,8 +13,12 @@ public class PatrolBehavior : BaseBehavior
         _agent.isStopped = false;
         _patrolPoints = patrolPoints;
         LastPatrolIndex = patrolIndex;
-        _animator.SetTrigger("Chase");
-        _agent.destination = _patrolPoints[LastPatrolIndex].position;
+
+        if (_patrolPoints.Length != 0)
+        { 
+            _animator.SetTrigger("Chase"); 
+            _agent.destination = _patrolPoints[LastPatrolIndex].position;
+        }
     }
 
     public override void Execute()
