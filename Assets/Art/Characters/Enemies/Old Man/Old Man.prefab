@@ -1291,7 +1291,6 @@ GameObject:
   - component: {fileID: 8001637169740018249}
   - component: {fileID: 3505524151247636705}
   - component: {fileID: 6199240132343137677}
-  - component: {fileID: 222549125570315519}
   - component: {fileID: 6205135065567327076}
   - component: {fileID: 5550509835041418280}
   m_Layer: 0
@@ -1314,8 +1313,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5960357600399669645}
-  - {fileID: 3143381945643510138}
+  - {fileID: 8669526449568361110}
+  - {fileID: 2768203038950554037}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3505524151247636705
@@ -1331,6 +1330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _behaviorHandler: {fileID: 6199240132343137677}
+  _enemyBody: {fileID: 8669526449568361110}
   _animator: {fileID: 6205135065567327076}
 --- !u!114 &6199240132343137677
 MonoBehaviour:
@@ -1344,31 +1344,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1061e50f8c9d44cac798c759e76cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 222549125570315519}
+  agent: {fileID: 2313034177887388976}
   settings: {fileID: 11400000, guid: 6eaef88e498ae9d469db810d4bb08a41, type: 2}
   patrolPoints: []
---- !u!195 &222549125570315519
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3578964711709821316}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 1
-  m_ObstacleAvoidanceType: 4
 --- !u!95 &6205135065567327076
 Animator:
   serializedVersion: 5
@@ -1473,8 +1451,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3647896518180367782}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1489,7 +1467,7 @@ Transform:
   - {fileID: 6742803136900096061}
   - {fileID: 455458857921995822}
   - {fileID: 577972821976920691}
-  m_Father: {fileID: 8001637169740018249}
+  m_Father: {fileID: 8669526449568361110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4113423153403644789
 GameObject:
@@ -3158,6 +3136,37 @@ Transform:
   - {fileID: 3578852210128571862}
   m_Father: {fileID: 2571786106605541648}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7533873586410844105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2768203038950554037}
+  m_Layer: 0
+  m_Name: PatrolPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2768203038950554037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7533873586410844105}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8001637169740018249}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7534797170114155428
 GameObject:
   m_ObjectHideFlags: 0
@@ -3399,14 +3408,14 @@ Transform:
   m_GameObject: {fileID: 7702003931860907125}
   serializedVersion: 2
   m_LocalRotation: {x: 5.070907e-14, y: 0.00000006180133, z: -0.0000008205174, w: 1}
-  m_LocalPosition: {x: 0.000000017035038, y: 0.96375823, z: -0.00035750045}
+  m_LocalPosition: {x: 0, y: 0.96375823, z: -0.00035750045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2442076130657401261}
   - {fileID: 3322547764639707644}
   - {fileID: 6326089103337066432}
-  m_Father: {fileID: 8001637169740018249}
+  m_Father: {fileID: 8669526449568361110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7852626890573406657
 GameObject:
@@ -4037,3 +4046,59 @@ Transform:
   - {fileID: 3465218962670291762}
   m_Father: {fileID: 6710922192749105504}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9213250077492727909
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8669526449568361110}
+  - component: {fileID: 2313034177887388976}
+  m_Layer: 0
+  m_Name: Body
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8669526449568361110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213250077492727909}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5960357600399669645}
+  - {fileID: 3143381945643510138}
+  m_Father: {fileID: 8001637169740018249}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &2313034177887388976
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213250077492727909}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4

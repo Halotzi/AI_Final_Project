@@ -13,6 +13,8 @@ public class EnemyBehaviorHandler : MonoBehaviour
     private BaseBehavior currentBehavior;
     private AlertOthers alertOthers;
 
+    private int _lastPatrolIndex = 0;
+
     void Update()
     {
         if (currentBehavior==null)
@@ -24,7 +26,12 @@ public class EnemyBehaviorHandler : MonoBehaviour
         {
             if(currentBehavior is ChaseBehavior)
                 return;
-            
+
+            if (currentBehavior is PatrolBehavior)
+            {
+                var patrolBehavior = (PatrolBehavior)currentBehavior;
+                _lastPatrolIndex = patrolBehavior.LastPatrolIndex;
+            }
             SetBehavior(new ChaseBehavior(_enemy, player, settings,agent,_animator));
             alertOthers.AlertNearbyEnemies(_enemy, player, settings);
         }
@@ -52,7 +59,7 @@ public class EnemyBehaviorHandler : MonoBehaviour
         player = GameManager.Instance.PlayerManager.transform;
         alertOthers = new AlertOthers(settings.alertRange);
         agent.speed = settings.patrolSpeed;  // Set initial speed to patrol speed
-        SetBehavior(new PatrolBehavior(_enemy, player, patrolPoints, settings,agent,animator));
+        SetBehavior(new PatrolBehavior(_enemy, player, patrolPoints, settings,agent,animator,_lastPatrolIndex));
     }
     
     public void SetBehavior(BaseBehavior newBehavior)
@@ -62,7 +69,7 @@ public class EnemyBehaviorHandler : MonoBehaviour
 
     private bool CanSeePlayer()
     {
-        if (Vector3.Distance(transform.position, player.position) <= settings.sightRange)
+        if (Vector3.Distance(_enemy.EnemyPosition, player.position) <= settings.sightRange)
         {
             return true;
         }
@@ -71,7 +78,7 @@ public class EnemyBehaviorHandler : MonoBehaviour
 
     private bool ShouldChasePlayer()
     {
-        if (CanSeePlayer() && Vector3.Distance(transform.position, player.position) > settings.attackRange)
+        if (CanSeePlayer() && Vector3.Distance(_enemy.EnemyPosition, player.position) > settings.attackRange)
             return true;
 
         return false;
@@ -79,7 +86,7 @@ public class EnemyBehaviorHandler : MonoBehaviour
     
     private bool ShouldAttackPlayer()
     {
-        if (Vector3.Distance(transform.position, player.position) <= settings.attackRange)
+        if (Vector3.Distance(_enemy.EnemyPosition, player.position) <= settings.attackRange)
             return true;
 
         return false;

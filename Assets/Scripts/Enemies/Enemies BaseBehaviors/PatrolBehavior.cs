@@ -3,23 +3,24 @@ using UnityEngine.AI;
 
 public class PatrolBehavior : BaseBehavior
 {
-    private NavMeshAgent agent;
-    private Transform[] patrolPoints;
-    private int patrolIndex = 0;
+    private NavMeshAgent _agent;
+    private Transform[] _patrolPoints;
+    public int LastPatrolIndex { get; private set; } = 0;
 
-    public PatrolBehavior(BaseEnemy enemy, Transform player, Transform[] patrolPoints, EnemySettings settings, NavMeshAgent agent, Animator animator) 
+    public PatrolBehavior(BaseEnemy enemy, Transform player, Transform[] patrolPoints, EnemySettings settings, NavMeshAgent agent, Animator animator, int patrolIndex) 
         : base(enemy, player, settings,agent, animator)
     {
-        this.agent = enemy.GetComponent<NavMeshAgent>();
-        this.patrolPoints = patrolPoints;
+        _agent = agent;
+        _patrolPoints = patrolPoints;
+        LastPatrolIndex = patrolIndex;
     }
 
     public override void Execute()
     {
-        if (agent.remainingDistance < agent.stoppingDistance)
+        if (_agent.remainingDistance < _agent.stoppingDistance)
         {
-            patrolIndex = (patrolIndex + 1) % patrolPoints.Length;
-            agent.destination = patrolPoints[patrolIndex].position;
+            LastPatrolIndex = (LastPatrolIndex + 1) % _patrolPoints.Length;
+            _agent.destination = _patrolPoints[LastPatrolIndex].position;
         }
     }
 }
