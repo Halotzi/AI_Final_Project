@@ -3,7 +3,6 @@ using UnityEngine.AI;
 
 public class PatrolBehavior : BaseBehavior
 {
-    private NavMeshAgent _agent;
     private Transform[] _patrolPoints;
     public int LastPatrolIndex { get; private set; } = 0;
 
@@ -13,11 +12,13 @@ public class PatrolBehavior : BaseBehavior
         _agent = agent;
         _patrolPoints = patrolPoints;
         LastPatrolIndex = patrolIndex;
+        _animator.SetTrigger("Chase");
+        _agent.destination = _patrolPoints[LastPatrolIndex].position;
     }
 
     public override void Execute()
     {
-        if (_agent.remainingDistance < _agent.stoppingDistance)
+        if (_agent.remainingDistance <= _agent.stoppingDistance)
         {
             LastPatrolIndex = (LastPatrolIndex + 1) % _patrolPoints.Length;
             _agent.destination = _patrolPoints[LastPatrolIndex].position;

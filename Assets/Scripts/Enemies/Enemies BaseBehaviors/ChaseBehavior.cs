@@ -3,8 +3,6 @@ using UnityEngine.AI;
 
 public class ChaseBehavior : BaseBehavior
 {
-    private NavMeshAgent agent;
-
     public ChaseBehavior(BaseEnemy enemy, Transform player, EnemySettings settings,NavMeshAgent agent, Animator animator) 
         : base(enemy, player, settings,agent, animator)
     {
@@ -13,6 +11,6 @@ public class ChaseBehavior : BaseBehavior
 
     public override void Execute()
     {
-        agent.destination = _player.position;
+        _agent.destination = _player.position;
     }
 }

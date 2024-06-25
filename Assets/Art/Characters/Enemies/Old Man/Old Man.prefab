@@ -1291,8 +1291,6 @@ GameObject:
   - component: {fileID: 8001637169740018249}
   - component: {fileID: 3505524151247636705}
   - component: {fileID: 6199240132343137677}
-  - component: {fileID: 6205135065567327076}
-  - component: {fileID: 5550509835041418280}
   m_Layer: 0
   m_Name: Old Man
   m_TagString: Enemy
@@ -1331,7 +1329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _behaviorHandler: {fileID: 6199240132343137677}
   _enemyBody: {fileID: 8669526449568361110}
-  _animator: {fileID: 6205135065567327076}
+  _animator: {fileID: 8116507052486132295}
 --- !u!114 &6199240132343137677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1347,54 +1345,6 @@ MonoBehaviour:
   agent: {fileID: 2313034177887388976}
   settings: {fileID: 11400000, guid: 6eaef88e498ae9d469db810d4bb08a41, type: 2}
   patrolPoints: []
---- !u!95 &6205135065567327076
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3578964711709821316}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: a3e4bebb3cc28684cadde25d65e31f8c, type: 3}
-  m_Controller: {fileID: 9100000, guid: 23c2411bdc942ae48ab8e8f41c29e9b7, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!54 &5550509835041418280
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3578964711709821316}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &3647835925149738015
 GameObject:
   m_ObjectHideFlags: 0
@@ -4056,6 +4006,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8669526449568361110}
   - component: {fileID: 2313034177887388976}
+  - component: {fileID: 8116507052486132295}
+  - component: {fileID: 2790515325101923261}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -4102,3 +4054,51 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
+--- !u!95 &8116507052486132295
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213250077492727909}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: a3e4bebb3cc28684cadde25d65e31f8c, type: 3}
+  m_Controller: {fileID: 9100000, guid: 23c2411bdc942ae48ab8e8f41c29e9b7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!54 &2790515325101923261
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9213250077492727909}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

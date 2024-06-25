@@ -94,7 +94,7 @@ public class EnemyBehaviorHandler : MonoBehaviour
     
     private bool ShouldSearchPlayer()
     {
-        if (!CanSeePlayer() && currentBehavior.GetType() != typeof(SearchBehavior))
+        if (!CanSeePlayer() && currentBehavior.GetType() == typeof(ChaseBehavior))
             return true;
 
         return false;
