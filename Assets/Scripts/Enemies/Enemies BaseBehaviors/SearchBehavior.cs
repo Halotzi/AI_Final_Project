@@ -17,7 +17,7 @@ public class SearchBehavior : BaseBehavior
     {
         if (Time.time - _startingSearchStartTime > _settings.searchDuration)
         {
-            _enemy.GetComponent<EnemyBehaviorHandler>().ReturnEnemyToPatrol();
+            _enemy.GetComponent<EnemyBehaviorHandler>().OnEnemyFinishSearch();
         }
         else
         {

@@ -74,9 +74,13 @@ public class EnemyBehaviorHandler : MonoBehaviour
         _currentBehavior = newBehavior;
     }
 
-    public void ReturnEnemyToPatrol()
+    public void OnEnemyFinishSearch()
     {
+        if(_patrolPoints.Length>0)
         SetBehavior(new PatrolBehavior(_baseEnemy, _playerTransform, _patrolPoints, _settings,_agent,_animator,_lastPatrolIndex));
+        
+        else
+            SetBehavior(new IdleBehavior(_baseEnemy, _playerTransform, _settings,_agent,_animator));
     }
 
     private bool CanSeePlayer()
