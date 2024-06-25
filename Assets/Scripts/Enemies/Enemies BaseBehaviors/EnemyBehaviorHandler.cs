@@ -33,6 +33,7 @@ public class EnemyBehaviorHandler : MonoBehaviour
                 var patrolBehavior = (PatrolBehavior)_currentBehavior;
                 _lastPatrolIndex = patrolBehavior.LastPatrolIndex;
             }
+            
             SetBehavior(new ChaseBehavior(_baseEnemy, _playerTransform, _settings,_agent,_animator));
             _alertOthers.AlertNearbyEnemies(_baseEnemy, _playerTransform, _settings);
         }

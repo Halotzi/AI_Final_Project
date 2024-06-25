@@ -7,14 +7,12 @@ public abstract class BaseEnemy : MonoBehaviour
     [SerializeField] protected Transform _enemyBody;
     [SerializeField] protected Animator _animator;
     
-    protected Transform player;
-
     public EnemyBehaviorHandler EnemyBehaviorHandler => _behaviorHandler;
     public Vector3 EnemyPosition => _enemyBody.position;
+    public Transform EnemyTransform => _enemyBody;
     
     protected virtual void Start()
     {
-        player = GameManager.Instance.PlayerManager.transform;
         _behaviorHandler.InitData(this,_animator);
     }
 }

@@ -7,6 +7,7 @@ public class ChaseBehavior : BaseBehavior
         : base(enemy, player, settings,agent, animator)
     {
         _agent.isStopped = false;
+        _animator.SetTrigger("Chase");
         agent.speed = settings.chaseSpeed; 
     }
 

@@ -16,8 +16,12 @@ public class AttackBehavior : BaseBehavior
 
     public override void Execute()
     {
-        if (Vector3.Distance(_enemy.transform.position, _player.position) <= _attackRange && Time.time > lastAttackTime + attackCooldown)
+        if (Vector3.Distance(_enemy.EnemyPosition, _player.position) <= _attackRange && Time.time > lastAttackTime + attackCooldown)
         {
+            Vector3 direction = (_player.position - _enemy.transform.position).normalized;
+            Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+            _enemy.transform.rotation = Quaternion.Slerp(_enemy.transform.rotation, lookRotation, Time.deltaTime * 10f);
+            
             _animator.SetTrigger("Attack");
             lastAttackTime = Time.time;
         }
