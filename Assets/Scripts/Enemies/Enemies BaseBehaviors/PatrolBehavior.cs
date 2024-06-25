@@ -7,7 +7,8 @@ public class PatrolBehavior : BaseBehavior
     private Transform[] patrolPoints;
     private int patrolIndex = 0;
 
-    public PatrolBehavior(GameObject enemy, Transform player, Transform[] patrolPoints) : base(enemy, player)
+    public PatrolBehavior(BaseEnemy enemy, Transform player, Transform[] patrolPoints, EnemySettings settings, NavMeshAgent agent, Animator animator) 
+        : base(enemy, player, settings,agent, animator)
     {
         this.agent = enemy.GetComponent<NavMeshAgent>();
         this.patrolPoints = patrolPoints;

@@ -1,10 +1,16 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class AlertOthers
 {
-    public float alertRange = 15f; // Range within which enemies can alert each other
+    private float alertRange;
 
-    public void AlertNearbyEnemies(GameObject enemy, Transform player)
+    public AlertOthers(float alertRange)
+    {
+        this.alertRange = alertRange;
+    }
+
+    public void AlertNearbyEnemies(BaseEnemy enemy, Transform player, EnemySettings settings)
     {
         Collider[] hitColliders = Physics.OverlapSphere(enemy.transform.position, alertRange);
         foreach (var hitCollider in hitColliders)
@@ -14,7 +20,7 @@ public class AlertOthers
                 EnemyBehaviorHandler otherEnemy = hitCollider.GetComponent<EnemyBehaviorHandler>();
                 if (otherEnemy != null)
                 {
-                    otherEnemy.SetBehavior(new ChaseBehavior(otherEnemy.gameObject, player));
+                    otherEnemy.SetBehavior(new ChaseBehavior(otherEnemy.GetComponent<BaseEnemy>(), player, settings,otherEnemy.GetComponent<NavMeshAgent>(),otherEnemy.GetComponent<Animator>()));
                 }
             }
         }

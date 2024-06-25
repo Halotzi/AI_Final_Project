@@ -3,59 +3,93 @@ using UnityEngine.AI;
 
 public class EnemyBehaviorHandler : MonoBehaviour
 {
-    [SerializeField]private NavMeshAgent agent;
+    [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private EnemySettings settings;  // Reference to the EnemySettings ScriptableObject
+    [SerializeField] private Transform[] patrolPoints;
 
-    public Transform[] patrolPoints;
-    public float attackRange = 2f;
-    public float searchDuration = 5f;
-    public float sightRange = 10f;
-
-    private Transform _playerTaTransform;
+    private Animator _animator;
+    private BaseEnemy _enemy;
+    private Transform player;
     private BaseBehavior currentBehavior;
     private AlertOthers alertOthers;
 
-    void Start()
-    {
-        _playerTaTransform = GameManager.Instance.PlayerManager.transform;
-        alertOthers = new AlertOthers();
-        SetBehavior(new PatrolBehavior(gameObject, _playerTaTransform, patrolPoints));
-    }
-
     void Update()
     {
+        if (currentBehavior==null)
+            return;
+        
         currentBehavior.Execute();
 
-        if (CanSeePlayer() && Vector3.Distance(transform.position, _playerTaTransform.position) > attackRange)
+        if (ShouldChasePlayer())
         {
-            SetBehavior(new ChaseBehavior(gameObject, _playerTaTransform));
-            if (alertOthers != null)
-            {
-                alertOthers.AlertNearbyEnemies(gameObject, _playerTaTransform);
-            }
+            if(currentBehavior is ChaseBehavior)
+                return;
+            
+            SetBehavior(new ChaseBehavior(_enemy, player, settings,agent,_animator));
+            alertOthers.AlertNearbyEnemies(_enemy, player, settings);
         }
-        else if (Vector3.Distance(transform.position, _playerTaTransform.position) <= attackRange)
+        else if (ShouldAttackPlayer())
         {
-            SetBehavior(new AttackBehavior(gameObject, _playerTaTransform, attackRange));
+            if(currentBehavior is AttackBehavior)
+                return;
+            
+            SetBehavior(new AttackBehavior(_enemy, player, settings.attackRange, settings,agent,_animator));
         }
-        else if (!CanSeePlayer() && currentBehavior.GetType() != typeof(SearchBehavior))
+        else if (ShouldSearchPlayer())
         {
-            SetBehavior(new SearchBehavior(gameObject, _playerTaTransform, searchDuration));
+            if(currentBehavior is SearchBehavior)
+                return;
+            
+            SetBehavior(new SearchBehavior(_enemy, player, settings,agent, _animator));
         }
     }
 
+
+    public void InitData(BaseEnemy enemy,Animator animator)
+    {
+        _enemy = enemy;
+        _animator = animator;
+        player = GameManager.Instance.PlayerManager.transform;
+        alertOthers = new AlertOthers(settings.alertRange);
+        agent.speed = settings.patrolSpeed;  // Set initial speed to patrol speed
+        SetBehavior(new PatrolBehavior(_enemy, player, patrolPoints, settings,agent,animator));
+    }
+    
     public void SetBehavior(BaseBehavior newBehavior)
     {
         currentBehavior = newBehavior;
     }
 
-    bool CanSeePlayer()
+    private bool CanSeePlayer()
     {
-        // Implement line of sight check logic
-        if (Vector3.Distance(transform.position, _playerTaTransform.position) <= sightRange)
+        if (Vector3.Distance(transform.position, player.position) <= settings.sightRange)
         {
-            // Add more complex logic here if needed (e.g., field of view, obstacles)
             return true;
         }
+        return false;
+    }
+
+    private bool ShouldChasePlayer()
+    {
+        if (CanSeePlayer() && Vector3.Distance(transform.position, player.position) > settings.attackRange)
+            return true;
+
+        return false;
+    }
+    
+    private bool ShouldAttackPlayer()
+    {
+        if (Vector3.Distance(transform.position, player.position) <= settings.attackRange)
+            return true;
+
+        return false;
+    }
+    
+    private bool ShouldSearchPlayer()
+    {
+        if (!CanSeePlayer() && currentBehavior.GetType() != typeof(SearchBehavior))
+            return true;
+
         return false;
     }
 }

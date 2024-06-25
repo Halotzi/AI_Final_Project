@@ -1,14 +1,21 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public abstract class BaseBehavior
 {
-    protected GameObject enemy;
-    protected Transform player;
+    protected BaseEnemy _enemy;
+    protected Transform _player;
+    protected EnemySettings _settings;
+    protected NavMeshAgent _agent;
+    protected Animator _animator;
 
-    public BaseBehavior(GameObject enemy, Transform player)
+    public BaseBehavior(BaseEnemy enemy, Transform player, EnemySettings settings, NavMeshAgent agent, Animator animator)
     {
-        this.enemy = enemy;
-        this.player = player;
+        _enemy = enemy;
+        _player = player;
+        _settings = settings;
+        _agent = agent;
+        _animator = animator;
     }
 
     public abstract void Execute();

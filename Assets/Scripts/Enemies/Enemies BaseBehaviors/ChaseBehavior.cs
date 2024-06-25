@@ -5,13 +5,14 @@ public class ChaseBehavior : BaseBehavior
 {
     private NavMeshAgent agent;
 
-    public ChaseBehavior(GameObject enemy, Transform player) : base(enemy, player)
+    public ChaseBehavior(BaseEnemy enemy, Transform player, EnemySettings settings,NavMeshAgent agent, Animator animator) 
+        : base(enemy, player, settings,agent, animator)
     {
-        this.agent = enemy.GetComponent<NavMeshAgent>();
+        agent.speed = settings.chaseSpeed; 
     }
 
     public override void Execute()
     {
-        agent.destination = player.position;
+        agent.destination = _player.position;
     }
 }

@@ -1,19 +1,19 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SearchBehavior : BaseBehavior
 {
-    private float searchDuration;
-    private float searchStartTime;
+    private float _startingSearchStartTime;
 
-    public SearchBehavior(GameObject enemy, Transform player, float searchDuration) : base(enemy, player)
+    public SearchBehavior(BaseEnemy enemy, Transform player, EnemySettings settings,NavMeshAgent agent, Animator animator) 
+        : base(enemy, player, settings,agent, animator)
     {
-        this.searchDuration = searchDuration;
-        this.searchStartTime = Time.time;
+        _startingSearchStartTime = Time.time;
     }
 
     public override void Execute()
     {
-        if (Time.time - searchStartTime > searchDuration)
+        if (Time.time - _startingSearchStartTime > _settings.searchDuration)
         {
             // Return to patrol or other state
         }
