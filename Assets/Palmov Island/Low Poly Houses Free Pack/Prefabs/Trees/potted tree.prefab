@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5155309843825775487}
   - component: {fileID: 6213326063252834786}
   - component: {fileID: -5447868853857377058}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: potted tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

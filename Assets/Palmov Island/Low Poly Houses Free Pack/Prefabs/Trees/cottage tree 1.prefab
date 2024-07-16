@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2094548974781374799}
   - component: {fileID: 3614607546306663587}
   - component: {fileID: 7280094789199907238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cottage tree 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7948312799663843222}
   - component: {fileID: 7683593242943672402}
   - component: {fileID: -4364056552706794102}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: spruce border 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

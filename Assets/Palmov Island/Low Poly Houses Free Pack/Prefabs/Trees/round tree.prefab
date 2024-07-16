@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4770420393298933493}
   - component: {fileID: 6198772906960542881}
   - component: {fileID: -5075685511244375516}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: round tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}

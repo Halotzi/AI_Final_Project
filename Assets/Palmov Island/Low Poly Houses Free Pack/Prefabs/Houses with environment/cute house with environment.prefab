@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7224485371800646871}
   - component: {fileID: 6046029564463400093}
   - component: {fileID: 3646136375641545811}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cute house with environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cottage tree 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5490127293582712033, guid: 13481381611e88a4ca2f951c5646b485, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -248,6 +252,10 @@ PrefabInstance:
     - target: {fileID: 6881050099682970002, guid: 3768e9958615ec448aa0316549ed68cc, type: 3}
       propertyPath: m_Name
       value: fence white left
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881050099682970002, guid: 3768e9958615ec448aa0316549ed68cc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -315,6 +323,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bush 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4510563771600718558, guid: bd3beafafa4d79140971d27971731027, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -381,6 +393,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cottage tree 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5490127293582712033, guid: 13481381611e88a4ca2f951c5646b485, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -446,6 +462,10 @@ PrefabInstance:
     - target: {fileID: 2072005799332839926, guid: 5dd8209dc48ef624498af0bc0c965410, type: 3}
       propertyPath: m_Name
       value: fence white right
+      objectReference: {fileID: 0}
+    - target: {fileID: 2072005799332839926, guid: 5dd8209dc48ef624498af0bc0c965410, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
