@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7984751043710912503}
   - component: {fileID: 2496730172749441169}
   - component: {fileID: 2613973861751818060}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 2667338651892337839}
   - component: {fileID: 3399962561527020237}
   - component: {fileID: 4394884728160605511}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 4679795683302118865}
   - component: {fileID: 543482371817153849}
   - component: {fileID: 3516872485492493132}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 3962052662414850618}
   - component: {fileID: 7345376939783572642}
   - component: {fileID: 7733677626305584531}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 2301123209689257543}
   - component: {fileID: 2033140269241545393}
   - component: {fileID: 6524531474115575992}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 446634583450653164}
   - component: {fileID: 6621422780681277340}
   - component: {fileID: 6118839207503974490}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 4100324983410185758}
   - component: {fileID: 6799230757029465739}
   - component: {fileID: 7870216858499269104}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -747,7 +747,7 @@ GameObject:
   - component: {fileID: 8449598095309475567}
   - component: {fileID: 1335749150891684263}
   - component: {fileID: 8483227869401231239}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +852,7 @@ GameObject:
   - component: {fileID: 4529165234219591074}
   - component: {fileID: 7438198259793054}
   - component: {fileID: 2878319310390431403}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,8 +957,7 @@ GameObject:
   - component: {fileID: 6430826018083658036}
   - component: {fileID: 9140642002837679614}
   - component: {fileID: 871872208041545241}
-  - component: {fileID: 7318368936192646488}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: ferris wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,22 +1061,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 19.315468, y: 16.710012, z: 8.373696}
   m_Center: {x: -0.0000009536743, y: 8.355004, z: 0}
---- !u!208 &7318368936192646488
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7339434766955449387}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 9.658, y: 8.3550005, z: 4.1870003}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 8.3550005, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &8218225977498706381
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,7 +1073,7 @@ GameObject:
   - component: {fileID: 1029934487449774825}
   - component: {fileID: 339177301093558933}
   - component: {fileID: 3400255910464234496}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: cabin 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1178,7 @@ GameObject:
   - component: {fileID: 3457828485126499065}
   - component: {fileID: 7504094006794885907}
   - component: {fileID: 1880501516049638338}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: rotation wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 4602497636718346737}
   - component: {fileID: 1746178941027939643}
   - component: {fileID: 3636920315700698185}
-  - component: {fileID: -3111621529186518330}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: fir tree group 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,19 +105,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6886635, y: 3.103579, z: 7.8243575}
   m_Center: {x: -0.000006645918, y: 1.5517888, z: 0.00000071525574}
---- !u!208 &-3111621529186518330
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232867830835664110}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.84400004, y: 1.552, z: 3.9120002}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 1.552, z: 0}
-  m_TimeToStationary: 0.5

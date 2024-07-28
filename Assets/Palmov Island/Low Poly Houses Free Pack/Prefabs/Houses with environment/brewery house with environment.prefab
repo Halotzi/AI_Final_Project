@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3623766041067962210}
   - component: {fileID: 1562400843891362728}
   - component: {fileID: 3498146160433312944}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: brewery house with environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3032642371099420650, guid: 5c255520e756e46468e29dd841e33bab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -194,7 +194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2431372758668166724, guid: 87b365e5fc281404a8b2cb1011e450c1, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3095705812015389950, guid: 87b365e5fc281404a8b2cb1011e450c1, type: 3}
       propertyPath: m_RootOrder
@@ -264,7 +264,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2431372758668166724, guid: 87b365e5fc281404a8b2cb1011e450c1, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3095705812015389950, guid: 87b365e5fc281404a8b2cb1011e450c1, type: 3}
       propertyPath: m_RootOrder
@@ -378,7 +378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3032642371099420650, guid: 5c255520e756e46468e29dd841e33bab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -448,7 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3032642371099420650, guid: 5c255520e756e46468e29dd841e33bab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
