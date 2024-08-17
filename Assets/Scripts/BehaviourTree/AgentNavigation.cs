@@ -8,19 +8,35 @@ namespace BehaviorTree
     [RequireComponent(typeof(AgentVision))]
     [RequireComponent(typeof(AgentHearing))]
     [RequireComponent(typeof(AgentState))]
-    
     public class AgentNavigation : BehaviorTree
     {
-        [SerializeField] private Transform[] patrolPoints;
-        [SerializeField] private Transform target;
-        [SerializeField] private Animator animator;
-        [SerializeField] private NavMeshAgent agent;
-        [SerializeField] private AgentVision vision;
-        [SerializeField] private AgentHearing hearing;
-        [SerializeField] private AgentState agentState;
+        public Transform[] patrolPoints;
+        public Transform target;
+        public Animator animator;
+        private NavMeshAgent agent;
+        private AgentVision vision;
+        private AgentHearing hearing;
+        private AgentState agentState;
 
-        protected override Node SetupTree()
+        public float stuckThreshold = 0.1f; // Threshold to consider the agent as stuck
+        public float checkInterval = 1f;   // Interval to check if the agent is stuck
+        private Vector3 lastPosition;
+        private float stuckTime;
+        private float currentTime;
+        public Transform startingPosition;
+
+        void Awake()
         {
+            agent = GetComponent<NavMeshAgent>();
+            vision = GetComponent<AgentVision>();
+            hearing = GetComponent<AgentHearing>();
+            agentState = GetComponent<AgentState>();
+
+            lastPosition = transform.position;
+            startingPosition = transform;
+        }
+
+        protected override Node SetupTree(){
             Node die = new DieNode(this, animator,agent, agentState);
             Node patrol = new PatrolNode(agent,animator, patrolPoints, agentState);
             Node chase = new ChaseNode(agent,animator,target,agentState);
@@ -49,6 +65,47 @@ namespace BehaviorTree
                 patrol
             });
         }
+
+        void Update(){
+            base.Update();
+            if (agent.isActiveAndEnabled)
+            {
+                // Check if the agent has been stuck for too long
+                if (Time.time - currentTime >= checkInterval)
+                {
+                    if (Vector3.Distance(lastPosition, agent.transform.position) < stuckThreshold)
+                    {
+                        stuckTime += checkInterval;
+                        if (stuckTime >= 10) // If stuck for 3 intervals
+                        {
+                            ResetAgentPosition();
+                        }
+                    }
+                    else
+                    {
+                        stuckTime = 0; // Reset stuck time if moving
+                    }
+
+                    lastPosition = agent.transform.position;
+                    currentTime = Time.time;
+                }
+            }
+        }
+        void ResetAgentPosition()
+        {
+            if (startingPosition != null)
+            {
+                agent.Warp(startingPosition.position);
+                agent.ResetPath(); // Clear the current path
+                Debug.Log("Agent reset to starting position");
+            }
+            else
+            {
+                //Debug.LogWarning("Starting position not set.");
+            }
+        }
     }
+
+    
 }
 

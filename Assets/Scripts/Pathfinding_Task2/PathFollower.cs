@@ -19,7 +19,7 @@ namespace PathFinding
         private Animator animator;
         private int currentNodeIndex = 0;
         private float currentSpeed;
-        private bool isMoving = false;
+        public bool isMoving = false;
 
         void Awake()
         {

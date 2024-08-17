@@ -11,7 +11,7 @@ namespace BehaviorTree{
             rootNode = SetupTree();
         }
 
-        void Update()
+        public void Update()
         {
             if (rootNode != null)
             {

@@ -957,6 +957,7 @@ GameObject:
   - component: {fileID: 6430826018083658036}
   - component: {fileID: 9140642002837679614}
   - component: {fileID: 871872208041545241}
+  - component: {fileID: -623631650016215442}
   m_Layer: 6
   m_Name: ferris wheel
   m_TagString: Untagged
@@ -1061,6 +1062,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 19.315468, y: 16.710012, z: 8.373696}
   m_Center: {x: -0.0000009536743, y: 8.355004, z: 0}
+--- !u!114 &-623631650016215442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7339434766955449387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &8218225977498706381
 GameObject:
   m_ObjectHideFlags: 0

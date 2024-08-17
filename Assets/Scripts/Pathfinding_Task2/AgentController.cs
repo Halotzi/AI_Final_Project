@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace PathFinding{
+namespace PathFinding
+{
     [RequireComponent(typeof(PathFindingAlgorithm))]
     [RequireComponent(typeof(PathFollower))]
     public class AgentController : MonoBehaviour
@@ -13,7 +14,8 @@ namespace PathFinding{
         public float targetMoveSpeed = 5;
         public bool debugPath = false;
         private List<Node> path;
-        void Start()
+
+        void Awake()
         {
             pathFinding = GetComponent<PathFindingAlgorithm>();
             pathFollower = GetComponent<PathFollower>();
@@ -22,11 +24,55 @@ namespace PathFinding{
         // Update is called once per frame
         void Update()
         {
-            if(Input.GetKeyDown(KeyCode.F)){
-                path = pathFinding.FindPath(transform.position,target.position);
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                FindAndSetTargetHealthPack();
+            }
+
+            ControlTarget();
+        }
+
+        public void StopAgent(bool value){
+            pathFollower.isMoving = !value;
+        }
+
+        public void FindAndSetTarget(Transform target){
+            path = pathFinding.FindPath(transform.position, target.position);
+            pathFollower.Follow(path);
+        }
+        public void FindAndSetTarget(Vector3 target){
+            path = pathFinding.FindPath(transform.position, target);
+            pathFollower.Follow(path);
+        }
+
+        private void FindAndSetTargetHealthPack()
+        {
+            HealthPack[] healthPacks = FindObjectsOfType<HealthPack>();
+            if (healthPacks.Length == 0)
+            {
+                Debug.LogWarning("No health packs found in the scene.");
+                return;
+            }
+
+            HealthPack closestHealthPack = null;
+            float closestDistance = float.MaxValue;
+
+            foreach (HealthPack healthPack in healthPacks)
+            {
+                float distance = Vector3.Distance(transform.position, healthPack.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closestHealthPack = healthPack;
+                }
+            }
+
+            if (closestHealthPack != null)
+            {
+                target = closestHealthPack.transform;
+                path = pathFinding.FindPath(transform.position, target.position);
                 pathFollower.Follow(path);
             }
-            ControlTarget();
         }
 
         private void ControlTarget()
@@ -58,20 +104,27 @@ namespace PathFinding{
                 direction += Vector3.down;
             }
 
-            target.position += direction * targetMoveSpeed * Time.deltaTime;
+            if(target != null){
+                target.position += direction * targetMoveSpeed * Time.deltaTime;
+            }
+            
         }
-    
-        void OnDrawGizmos(){
-            if(!debugPath){
+
+        void OnDrawGizmos()
+        {
+            if (!debugPath)
+            {
                 return;
             }
-        
-            if(path != null){
-                foreach(Node node in path){
+
+            if (path != null)
+            {
+                foreach (Node node in path)
+                {
                     Gizmos.color = Color.green;
                     Gizmos.DrawSphere(node.worldPosition, .5f);
                 }
             }
         }
-    }    
+    }
 }

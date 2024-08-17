@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4722022243047357116}
   - component: {fileID: 7377751059256856182}
   - component: {fileID: 2151353175933228385}
+  - component: {fileID: -9185147898852924464}
   m_Layer: 6
   m_Name: post office with environment
   m_TagString: Untagged
@@ -109,6 +110,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 10.535742, y: 8.625278, z: 8.192301}
   m_Center: {x: 0.00000023841858, y: 4.312639, z: 0}
+--- !u!114 &-9185147898852924464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9035334726217101219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1006064741863061803
 PrefabInstance:
   m_ObjectHideFlags: 0

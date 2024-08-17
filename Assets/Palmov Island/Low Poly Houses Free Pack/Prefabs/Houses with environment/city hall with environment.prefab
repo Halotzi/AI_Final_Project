@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1104434703247028332}
   - component: {fileID: 2933895919046214822}
   - component: {fileID: 5831688425153540824}
+  - component: {fileID: 272387659297349647}
   m_Layer: 6
   m_Name: city hall with environment
   m_TagString: Untagged
@@ -111,6 +112,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 15.519779, y: 14.9736, z: 12.257131}
   m_Center: {x: -0.00000071525574, y: 7.4868, z: 0}
+--- !u!114 &272387659297349647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3726648131083330931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1894812931876494606
 PrefabInstance:
   m_ObjectHideFlags: 0

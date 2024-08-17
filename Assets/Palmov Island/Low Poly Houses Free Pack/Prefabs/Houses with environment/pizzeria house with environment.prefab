@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4705755401331450943}
   - component: {fileID: 7397941748731498741}
   - component: {fileID: 2291188412554366551}
+  - component: {fileID: -1794172414688484879}
   m_Layer: 6
   m_Name: pizzeria house with environment
   m_TagString: Untagged
@@ -111,6 +112,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.173882, y: 9.338072, z: 6.794386}
   m_Center: {x: -0.0000023841858, y: 4.669036, z: 0.00000011920929}
+--- !u!114 &-1794172414688484879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9055112274125254944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1001 &1150226055815107020
 PrefabInstance:
   m_ObjectHideFlags: 0

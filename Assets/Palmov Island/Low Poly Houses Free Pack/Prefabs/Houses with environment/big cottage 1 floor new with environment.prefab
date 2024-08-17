@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3199612339545093688}
   - component: {fileID: 829710379148526322}
   - component: {fileID: 4275647382376838527}
+  - component: {fileID: -3673534245869156787}
   m_Layer: 6
   m_Name: big cottage 1 floor new with environment
   m_TagString: Untagged
@@ -111,6 +112,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 15.115075, y: 5.789953, z: 7.742449}
   m_Center: {x: 0, y: 2.8949761, z: 0.00000035762787}
+--- !u!114 &-3673534245869156787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189870874870014759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1001 &679293289204077034
 PrefabInstance:
   m_ObjectHideFlags: 0

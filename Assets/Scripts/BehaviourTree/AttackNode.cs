@@ -39,6 +39,7 @@ namespace BehaviorTree
                 if (distanceToPlayer <= agentState.attackRange)
                 {
                     agentState.isAttacking= true;
+                    EventManager.Instance.events.onEnemyAttack.Invoke(agent.transform.position);
                     state = NodeState.RUNNING;
                 }
                 else

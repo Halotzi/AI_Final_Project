@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6382523055155152253}
   - component: {fileID: 9185005330144391607}
   - component: {fileID: 6095220252507161198}
+  - component: {fileID: 2507273045733319716}
   m_Layer: 6
   m_Name: fountain
   m_TagString: Untagged
@@ -129,3 +130,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.4819403, y: 0.4893758}
   m_EdgeRadius: 0
+--- !u!114 &2507273045733319716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7239340545355337826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 0
+  m_Area: 0
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff

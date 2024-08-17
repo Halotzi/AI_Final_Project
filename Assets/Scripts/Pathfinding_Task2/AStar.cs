@@ -57,7 +57,7 @@ namespace PathFinding{
                 currentNode = currentNode.parent;
             }
             path.Reverse();
-            Debug.Log("Here");
+            //Debug.Log("Here");
             //grid.path = path;
             return path;
         }

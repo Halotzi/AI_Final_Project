@@ -12,11 +12,17 @@ namespace BehaviorTree{
             public float searchDuration = 5f;
             public float searchTimer =10;
             public bool isAttacking = false;
-            
             [SerializeField] public float attackTimer = 0;
+
             [SerializeField] public bool PlayerWasSeen = false;
             [SerializeField] public Vector3 LastKnownPlayerPosition;
             [SerializeField] public int currentPatrolIndex;
             [SerializeField] public float deathTimer = 8;
+
+            void Update(){
+                if(Input.GetKeyDown(KeyCode.D)){
+                    health = 0;
+                }
+            }
     }
 }
