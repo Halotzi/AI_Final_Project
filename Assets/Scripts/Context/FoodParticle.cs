@@ -10,7 +10,7 @@ public class FoodParticle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Dragon")){
-            controller.Reset();
+           // controller.Reset();
         }
     }
 }
